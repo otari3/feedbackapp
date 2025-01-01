@@ -17,4 +17,4 @@ class Employee(models.Model):
   name = models.TextField()
   tab = models.TextField()
   status = models.CharField( max_length=2,choices=Status.choices,default=Status.STANDARD)
-  company = models.ForeignKey(Company,on_delete=models.CASCADE)f
+  company = models.ForeignKey(Company,on_delete=models.CASCADE)
