@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'utils.custom_exception_handler.custom_exception_handler',
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',  # Ensure this is included
