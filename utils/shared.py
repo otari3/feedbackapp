@@ -10,3 +10,11 @@ def swagerHeaders():
               )
     return [menualParams]
     
+def swager_body():
+    return {
+        "register_componey":openapi.Schema(
+                        type=openapi.TYPE_OBJECT, 
+                        properties={
+        'email': openapi.Schema (type=openapi.TYPE_STRING, description='string'),
+        'name': openapi.Schema(type=openapi.TYPE_STRING, description='string'),
+    })}
