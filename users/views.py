@@ -11,8 +11,8 @@ import json
 @swagger_auto_schema(method='get',manual_parameters=swagerHeaders())
 @api_view(['get'])
 def testingSwager(request):
-  raise custom_erros.APIException('hello')
-  return Response(test)
+  header = request.headers.get('Authorization')
+  return Response(header)
 
 @swagger_auto_schema(method='post',request_body=shared.swager_body()['register_componey'])
 @api_view(['post'])
